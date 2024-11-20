@@ -1,0 +1,36 @@
+{
+  "error": "false",
+  "message": "Success",
+  "reports": [
+    {
+      "id": "begal-12345",
+      "name": "Bima Adityo Kurniawan",
+      "description": "Begal activity seen around Indomaret",
+      "city": "Bogor",
+      "photoUrl": "https://img.freepik.com/free-photo/criminals-wear-black-mask-hold-dark-gray_1150-15143.jpg?t=st=1732089793~exp=1732093393~hmac=b9fb5b009a355cdf59791efbf54cb0f566f0799387642924ece5c326fdb6af3f&w=1060",
+      "lon": 106.761429,
+      "lat": -6.547753,
+      "createdAt": "2024-11-08T06:34:18.598Z"
+    },
+    {
+      "id": "begal-12346",
+      "name": "Johnson Jonah Jameson",
+      "description": "I saw fake spiderman robbing someone with a knife",
+      "city": "Bogor",
+      "photoUrl": "https://img.freepik.com/free-photo/robber-man-dressed-black-hoodie-stands-with-disguised-face-holds-lot-money-his-hands_176532-14371.jpg?t=st=1732089823~exp=1732093423~hmac=59e18cbe020f91b316162efab2f555457c865c7768a24b7a0d6c34252aaaff39&w=1060",
+      "lon": 106.778426,
+      "lat": -6.556023,
+      "createdAt": "2024-11-08T06:34:18.598Z"
+    },
+    {
+      "id": "begal-12347",
+      "name": "Peter Parkir",
+      "description": "My motorcycle got stolen by a fake spiderman",
+      "city": "Bogor",
+      "photoUrl": "https://img.freepik.com/free-photo/male-thieves-steal-laptop-computer-gray_1150-15144.jpg?t=st=1732089856~exp=1732093456~hmac=bbe16f8346e52a481e3d293037a54778f50cfecc49391469584cc76850f42099&w=1060",
+      "lon": 106.766039,
+      "lat": -6.562349,
+      "createdAt": "2024-11-08T06:34:18.598Z"
+    }
+  ]
+}

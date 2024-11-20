@@ -1,0 +1,273 @@
+$font-main-set: "Raleway", serif;
+$theme-color-1: #ffffff;
+$theme-color-2: #22177A;
+$theme-color-3: #BBE9FF;
+$better-white: #f4f6ff;
+$better-red: #c7253e;
+$creamy: #f8fae5;
+$hero-size: 75vh;
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font-main-set;
+}
+
+body {
+  background: $creamy;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+footer {
+  background: $theme-color-1;
+  color: black;
+  text-align: center;
+  padding: 0.5rem;
+
+  p {
+    margin: 0.5rem;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+app-bar {
+  background: $theme-color-1;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  img {
+    width: 144px;
+    height: 72px;
+  }
+}
+
+.icon-group {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+#nav-drawer-btn {
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+  background: url("/src/public/images/menu.svg");
+  background-size: 100% 100%;
+  border: none;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+}
+
+.nav-drawer {
+  display: none;
+  color: black;
+  font-size: 2rem;
+  width: 100%;
+  transition: all 0.25s ease-in-out;
+
+  a {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+
+    &:hover,
+    &:focus {
+      background: $theme-color-3;
+    }
+  }
+
+  &.active {
+    display: block;
+    background: white;
+  }
+}
+
+.map-container {
+  height: 80vh;
+  width: 100%;
+  border-style: solid;
+  border-color: cadetblue;
+
+  #map {
+    height: 100%;
+  }
+}
+
+.marker {
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.maplibregl-popup {
+  max-width: 200px;
+}
+
+//=====================
+// Report Page
+// ====================
+.reports {
+  width: clamp(50%, 1250px, 100%);
+  padding: 2.25rem;
+  margin: auto;
+
+  button {
+    border-radius: 16px;
+    padding: 1em;
+    border: none;
+    background: $theme-color-3;
+    color: black;
+    font-size: 1.1rem;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background: $theme-color-2;
+      color: white;
+    }
+  }
+}
+
+.reports-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  margin-top: 1rem;
+}
+
+.report-item {
+  display: grid;
+  background: $better-white;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-areas:
+    "image name name"
+    "image description description"
+    "image city timestamp";
+  padding: 1em;
+  margin: 0.25rem;
+  border: 2px solid $theme-color-3;
+  border-radius: 24px;
+
+  picture {
+    grid-area: image;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 24px;
+  }
+
+  .item-name {
+    grid-area: name;
+    margin-left: 1rem;
+    color: $theme-color-2;
+    height: 100%;
+  }
+
+  .item-description {
+    grid-area: description;
+    margin-left: 1rem;
+    height: 100%;
+  }
+
+  .item-city {
+    grid-area: city;
+    margin-left: 1rem;
+    color: $theme-color-2;
+    padding-top: 0.25rem;
+    border-top: 1px solid $theme-color-3;
+  }
+
+  .item-timestamp {
+    grid-area: timestamp;
+    color: $theme-color-2;
+    text-align: right;
+    padding-top: 0.25rem;
+    border-top: 1px solid $theme-color-3;
+  }
+}
+
+//=====================
+// Create Report Page
+// ====================
+
+
+@media screen and (min-width: 1024px) {
+  #nav-drawer-btn {
+    display: none;
+  }
+
+  app-bar {
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  .nav-drawer {
+    display: block;
+    color: $theme-color-2;
+    font-size: 1.7rem;
+    ul {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 1rem;
+      margin-right: 1rem;
+      li {
+        text-align: center;
+        width: 100%;
+      }
+    }
+    a {
+      border-bottom: 4px solid transparent;
+      &:hover,
+      &:focus {
+        background: none;
+        color: $theme-color-3;
+        border-bottom: 4px solid $theme-color-3;
+      }
+    }
+
+    &.active {
+      display: block;
+      background: none;
+    }
+  }
+}
