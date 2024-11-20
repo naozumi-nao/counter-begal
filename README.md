@@ -55,9 +55,9 @@ http://localhost:9000
       "description": "Begal activity seen around Indomaret",
       "city": "Semarang",
       "photoUrl": "https://images.pexels.com/photos/13268478/pexels-photo-13268478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "lon": -106.761429,
+      "lon": 106.761429,
       "lat": -6.547753,
-      "createdAt": "2022-01-08T06:34:18.598Z"
+      "createdAt": "2024-11-08T06:34:18.598Z"
     }
   ]
 }
@@ -82,9 +82,9 @@ http://localhost:9000
       "description": "Begal activity seen around Indomaret",
       "city": "Semarang",
       "photoUrl": "https://images.pexels.com/photos/13268478/pexels-photo-13268478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "lon": -106.761429,
+      "lon": 106.761429,
       "lat": -6.547753,
-      "createdAt": "1 November 2024"
+      "createdAt": "2024-11-08T06:34:18.598Z"
     }
 }
 ```
