@@ -1,9 +1,5 @@
 const CONFIG = {
-  BASE_URL: "",
-  BASE_IMAGE_URL: "",
-  DATABASE_NAME: "",
-  DATABASE_VERSION: "",
-  OBJECT_STORE_NAME: "",
+  BASE_URL: "http://localhost:3000",
 };
 
 export default CONFIG;
