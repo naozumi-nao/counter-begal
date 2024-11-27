@@ -41,8 +41,15 @@ const createReportItemTemplate = (report) => `
   </section>
 `;
 
+const createAddReportButtonTemplate = () => `
+  <button aria-label="" id="favorite" class="favorite-btn">
+     <i class="fa-regular fa-plus"></i>
+  </button>
+`;
+
 export {
   createAppBarTemplate,
   createFooterBarTemplate,
-  createReportItemTemplate
+  createReportItemTemplate,
+  createAddReportButtonTemplate
 };
