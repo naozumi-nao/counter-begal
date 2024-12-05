@@ -1,13 +1,12 @@
 import turfCircle from "@turf/circle";
 import { Popup, Marker } from "maplibre-gl";
+import convertDate from "./iso-date-converter";
 
 class Mapping {
   static generateMarker(map, report) {
     const coordinates = [report.lon, report.lat];
-    console.log(coordinates);
-    // create the popup
     const popup = new Popup({offset: 25}).setText(
-      `${report.description}`
+      `${report.description} \n (${convertDate(report.createdAt)})`
     );
 
     const el = document.createElement('div');
@@ -23,8 +22,7 @@ class Mapping {
         .addTo(map);
   }
 
-
-  static generateCircle(map, coordinates) {
+  static generateCircle(map, coordinates, reportId) {
     // Generate a polygon using turf.circle
     // See https://turfjs.org/docs/#circle
     const radius = 2.5; // kilometer
@@ -35,29 +33,29 @@ class Mapping {
     const circle = turfCircle(coordinates, radius, options);
 
     // Add the circle as a GeoJSON source
-    map.addSource("location-radius", {
+    map.addSource(reportId, {
         type: "geojson",
         data: circle
     });
 
     // Add a fill layer with some transparency
     map.addLayer({
-        id: "location-radius",
+        id: `${reportId}-location-radius`,
         type: "fill",
-        source: "location-radius",
+        source: reportId,
         paint: {
-            "fill-color": "#8CCFFF",
+            "fill-color": "#FCC737", 
             "fill-opacity": 0.55
         }
     });
 
     // Add a line layer to draw the circle outline
     map.addLayer({
-        id: "location-radius-outline",
+        id: `${reportId}-location-radius-outline`,
         type: "line",
-        source: "location-radius",
+        source: reportId,
         paint: {
-            "line-color": "#0094ff",
+            "line-color": "#C7253E",
             "line-width": 2
         }
     });

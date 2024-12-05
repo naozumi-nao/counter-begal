@@ -1,6 +1,6 @@
 import "lazysizes";
 import "lazysizes/plugins/parent-fit/ls.parent-fit.js";
-import dateConverter from "../../utils/iso-date-converter.js"
+import convertDate from "../../utils/iso-date-converter.js"
 
 const createAppBarTemplate = () => `
   <div class="icon-group">
@@ -37,7 +37,7 @@ const createReportItemTemplate = (report) => `
     <h3 tabindex="0" class="item-name">${report.name || '-'}</h3>
     <p class="item-description">${report.description || '-'}</p>
     <p class="item-city">Location: <strong>${report.city || '-'}</strong></p>
-    <p class="item-timestamp">Date posted: <strong>${dateConverter(report.createdAt) || '-'}</strong></p>
+    <p class="item-timestamp">${convertDate(report.createdAt) || '-'}</p>
   </section>
 `;
 

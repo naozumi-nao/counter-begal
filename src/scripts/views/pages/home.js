@@ -25,8 +25,7 @@ const Home = {
 
     map.on("load", async () => {
       try {
-        const result = await ReportsApiSource.getReports();
-        const reports = result.reports;
+        const reports = await ReportsApiSource.getReports();
           reports.forEach((report) => {
             Mapping.generateMarker(map, report);
             console.log(report);

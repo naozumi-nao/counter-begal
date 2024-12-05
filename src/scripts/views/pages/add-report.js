@@ -27,13 +27,14 @@ const Home = {
           type="text"
           required
         />
-        <button id="share-location-btn">Share Location</button>
         <label for="report-longitude">longitude</label>
         <input 
           id="report-form-longitude" 
           name="report-longitude" 
           type="text"
-          disabled
+          placeholder="auto-fill with Share Location"
+          onkeydown="return false;"
+          style="caret-color: transparent !important;"
           required
         />
         <label for="report-latitude">latitude</label>
@@ -41,9 +42,14 @@ const Home = {
           id="report-form-latitude" 
           name="report-latitude" 
           type="text"
-          disabled
+          placeholder="auto-fill with Share Location"
+          onkeydown="return false;"
+          style="caret-color: transparent !important;"
           required
         />
+        <button id="share-location-btn">Share Location
+          <i class="fa-solid fa-location-crosshairs"></i>
+        </button>
         <label for="report-image">Upload an Image</label>
         <input 
           id="report-form-image"
@@ -71,6 +77,14 @@ const Home = {
       const lat = document.querySelector("#report-form-latitude").value;
       const imageFile = document.querySelector("#report-form-image").files[0];
 
+      console.log(lon);
+      console.log(lat);
+
+      if (lon === null || lat === null) {
+        AlertModals.showErrorModal("Sharing location is required to add report!");
+        return false;
+      }
+
       const formData = new FormData();
 
       formData.append("name", name);
@@ -79,8 +93,6 @@ const Home = {
       formData.append("lon", lon);
       formData.append("lat", lat);
       formData.append("image-file", imageFile);
-
-      console.log(formData);
 
       try {
         AlertModals.showLoadingModal();
