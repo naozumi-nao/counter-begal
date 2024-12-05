@@ -11,9 +11,9 @@ const Reports = {
           <loading-anim></loading-anim>
         </div>
       </section>
-      <button aria-label="Report an incident" id="report-btn" class="report-btn">
-        <i class="fa-solid fa-pen-to-square"></i>
-      </button>
+      <a id="add-report" class="add-report-btn" href="/#/add-report" aria-label="add a new report" >
+        <i class="fa-regular fa-plus"></i>
+      </a>
     `;
   },
 
@@ -24,14 +24,14 @@ const Reports = {
       if (reports.length) {
         DomManipulator.emptyElement(reportsContainerElement);
         const reportItemElements = reports.map((report) => {
-            const reportItemElement = document.createElement('report-item');
+            const reportItemElement = document.createElement("report-item");
             reportItemElement.report = report;
             return reportItemElement;
           },
         );
         reportsContainerElement.append(...reportItemElements);
       } else {
-        reportsContainerElement.innerHTML = '<p>No reports as of now</p>';
+        reportsContainerElement.innerHTML = "<p>No reports as of now</p>";
       }
     } catch (error) {
       AlertModals.showErrorModal(error);

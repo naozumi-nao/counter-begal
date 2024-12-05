@@ -25,12 +25,12 @@ const Home = {
 
     map.on("load", async () => {
       try {
-        const reports = await ReportsApiSource.getReports();
+        const result = await ReportsApiSource.getReports();
+        const reports = result.reports;
           reports.forEach((report) => {
             Mapping.generateMarker(map, report);
             console.log(report);
           }); 
-  
       } catch (error) {
         AlertModals.showErrorModal(error);
       }

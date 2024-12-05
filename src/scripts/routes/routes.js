@@ -5,7 +5,7 @@ import AddReport from "../views/pages/add-report.js";
 const routes = {
   '/': Home,
   '/reports': Reports,
-  '/addreport': AddReport,
+  '/add-report': AddReport,
 };
 
 export default routes;
