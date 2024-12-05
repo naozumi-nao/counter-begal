@@ -16,7 +16,7 @@ const createAppBarTemplate = () => `
   <nav class="nav-drawer">
     <ul>
       <li><a href="/">Home</a></li>
-      <li><a href="#/reports">Reports</a></li>
+      <li><a href="#/reports">Laporan</a></li>
       <li><a href="https://linkedin.com/in/bimaadityokurniawan/" target="_blank" rel="noreferrer">About Us</a></li>
     </ul>
   </nav>
@@ -36,7 +36,7 @@ const createReportItemTemplate = (report) => `
     </picture>
     <h3 tabindex="0" class="item-name">${report.name || '-'}</h3>
     <p class="item-description">${report.description || '-'}</p>
-    <p class="item-city">Location: <strong>${report.city || '-'}</strong></p>
+    <p class="item-city">Lokasi: <strong>${report.city || '-'}</strong></p>
     <p class="item-timestamp">${convertDate(report.createdAt) || '-'}</p>
   </section>
 `;

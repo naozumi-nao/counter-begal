@@ -6,7 +6,7 @@ const Reports = {
   async render() {
     return `
       <section class="reports">
-        <h2 tabindex="0">All reports from everyone</h2>
+        <h2 tabindex="0">Laporan Masyarakat</h2>
         <div class="reports-container">
           <loading-anim></loading-anim>
         </div>

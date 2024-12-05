@@ -5,7 +5,7 @@ const Home = {
   async render() {
     return `
       <form id="add-report-form" autocomplete="off">
-        <label for="report-name">Name</label>
+        <label for="report-name">Nama Anda</label>
         <input 
           id="report-form-name" 
           name="report-name" 
@@ -13,14 +13,14 @@ const Home = {
           autofocus
           required
         />
-        <label for="report-description">Description</label>
+        <label for="report-description">Deskripsi Kejadian</label>
         <textarea 
           id="report-form-description" 
           name="report-description"
           type="text"
           required
         ></textarea>
-        <label for="report-city">City</label>
+        <label for="report-city">Kota Terjadinya Peristiwa Tersebut</label>
         <input 
           id="report-form-city" 
           name="report-city" 
@@ -32,7 +32,7 @@ const Home = {
           id="report-form-longitude" 
           name="report-longitude" 
           type="text"
-          placeholder="auto-fill with Share Location"
+          placeholder="Otomatis terisi dengan Bagikan Lokasi"
           onkeydown="return false;"
           style="caret-color: transparent !important;"
           required
@@ -42,15 +42,15 @@ const Home = {
           id="report-form-latitude" 
           name="report-latitude" 
           type="text"
-          placeholder="auto-fill with Share Location"
+          placeholder="Otomatis terisi dengan Bagikan Lokasi"
           onkeydown="return false;"
           style="caret-color: transparent !important;"
           required
         />
-        <button id="share-location-btn">Share Location
+        <button id="share-location-btn">Bagikan Lokasi Anda
           <i class="fa-solid fa-location-crosshairs"></i>
         </button>
-        <label for="report-image">Upload an Image</label>
+        <label for="report-image">Upload Foto Tempat Kejadian Perkara</label>
         <input 
           id="report-form-image"
           name="report-image"
@@ -58,7 +58,7 @@ const Home = {
           accept="image/*"
           required
         />
-        <button id="report-form-submit-btn" type="submit">Submit report</button>
+        <button id="report-form-submit-btn" type="submit">Kirim Laporan</button>
       </form>
     `;
   },

@@ -223,12 +223,10 @@ app-bar {
   .item-name {
     grid-area: name;
     color: $theme-color-2;
-    height: 100%;
   }
 
   .item-description {
     grid-area: description;
-    height: 100%;
   }
 
   .item-city {
@@ -239,6 +237,7 @@ app-bar {
 
   .item-timestamp {
     grid-area: timestamp;
+    font-family: 'Courier New', Courier, monospace;
     color: $theme-color-2;
     text-align: right;
     padding-top: 0.25rem;
