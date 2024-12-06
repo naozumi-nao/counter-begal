@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2';
+import convertDate from './iso-date-converter';
 
 class AlertModals {
   static showSuccessModal(title, message) {
@@ -24,6 +25,17 @@ class AlertModals {
       didOpen: () => {
         Swal.showLoading();
       },
+    });
+  }
+
+  static showDetailModal(report) {
+    Swal.fire({
+      title: `${report.name}`,
+      text: `${report.description} terjadi di ${report.city} pada ${convertDate(report.createdAt)}`,
+      imageUrl: `${report.photoUrl}`,
+      imageWidth: 325,
+      imageHeight: 325,
+      imageAlt: "Custom image"
     });
   }
 }

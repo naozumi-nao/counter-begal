@@ -26,6 +26,9 @@ const Reports = {
         const reportItemElements = reports.map((report) => {
             const reportItemElement = document.createElement("report-item");
             reportItemElement.report = report;
+            reportItemElement.addEventListener("click", () => {
+              AlertModals.showDetailModal(report);
+            });
             return reportItemElement;
           },
         );

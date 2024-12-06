@@ -202,10 +202,11 @@ app-bar {
     "image city"
     "image timestamp";
   padding: 1em;
-  margin: 0.25rem;
+  margin: 1rem 0.25rem;
   gap: 1rem;
   border: 2px solid $theme-color-3;
   border-radius: 24px;
+  cursor: pointer;
 
   picture {
     grid-area: image;
