@@ -367,6 +367,37 @@ form {
   }
 }
 
+//=====================
+// About Page
+// ====================
+#about {
+  width: clamp(50%, 66ch, 100%);
+  padding: 2.25rem;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+
+  h2, h3 {
+    color: $theme-color-2;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  ul {
+    list-style:disc;
+
+    li {
+      margin-left: 2rem;
+    }
+  }
+
+  a {
+    color:$better-red;
+  }
+}
 
 @media screen and (min-width: 1024px) {
   #nav-drawer-btn {

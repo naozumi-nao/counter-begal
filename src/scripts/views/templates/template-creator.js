@@ -17,7 +17,7 @@ const createAppBarTemplate = () => `
     <ul>
       <li><a href="/">Home</a></li>
       <li><a href="#/reports">Laporan</a></li>
-      <li><a href="https://linkedin.com/in/bimaadityokurniawan/" target="_blank" rel="noreferrer">About Us</a></li>
+      <li><a href="#/about">About Us</a></li>
     </ul>
   </nav>
 `;
