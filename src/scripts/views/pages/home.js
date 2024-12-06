@@ -18,7 +18,7 @@ const Home = {
         container: "map",
         zoom: 10,
         center: coordinates,
-        style: "https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL",
+        style: "https://api.maptiler.com/maps/topo-v2/style.json?key=VLx71yjCvXUgjPBsm6K9",
         maxZoom: 18,
         maxPitch: 85
     });
