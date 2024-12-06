@@ -98,6 +98,7 @@ const Home = {
         AlertModals.showLoadingModal();
         const result = await ReportsApiSource.postReport(formData);
         AlertModals.showSuccessModal(result.message, "successfully added report");
+        document.location.href = "#/reports";
       } catch (error) {
         AlertModals.showErrorModal(error);
       }
