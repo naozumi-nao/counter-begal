@@ -1,5 +1,6 @@
 # Counter-Begal
 Deployed Link: https://counter-begal.netlify.app
+Project Brief: https://drive.google.com/file/d/1mdMxxxPDs1e0QBQWQNqdvi1pxYM6ZHe7/view?usp=sharing
 
 ## Deskripsi Proyek
 Counter-Begal adalah aplikasi peta interaktif berbasis web yang dirancang untuk membantu masyarakat merasa lebih aman. Aplikasi ini mengumpulkan laporan langsung dari pengguna tentang aktivitas begal di berbagai lokasi. Dengan begitu, siapa pun dapat melihat area mana yang perlu diwaspadai dan mengambil tindakan pencegahan. Aplikasi ini dapat menjadi media bagi masyarakat untuk saling berbagi informasi kejahatan serta berbagi kewaspadaan dan meningkatkan kewaspadaan masyarakat terhadap potensi tindak kejahatan.
